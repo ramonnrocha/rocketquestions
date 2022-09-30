@@ -1,0 +1,100 @@
+.content {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 11.4rem 1fr;
+
+  grid-template-areas: 'header header'
+  'left right';
+}
+
+header {
+  grid-area: header;
+}
+
+#bg {
+  grid-area: left;
+
+  background: url('/images/home-bg-img.svg') no-repeat top/contain;
+  background-position-x: -12rem;
+  
+}
+
+main {
+  grid-area: right;
+  display: flex;
+  align-items: center;
+  margin-top: -12rem;
+}
+
+main .container {
+  width: min(36.3rem, 100%);
+}
+
+main h2 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--black);
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 2.4rem;
+}
+
+input {
+  border: 0.2rem solid var(--grey-blue);
+  padding: 0 1.6rem;
+}
+
+input, button, .button {
+  width: 100%;
+  margin-bottom: 1.8rem;
+}
+
+/* Header */
+
+.content header {
+  width: 80%;
+  margin: 3.5rem auto;
+}
+
+.container header img {
+  width: 16.7rem;
+  
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin : 4rem auto;
+  color: var(--grey-blue);
+  font-weight: 500;
+  gap: 1rem;
+}
+
+.divider {
+  width: 15rem;
+  height: .1rem;
+  background-color: var(--grey-blue);
+}
+
+/*** create balls ***/
+.ball{
+  width: 21.2rem;
+  height: 21.2rem;
+  background: var(--blue);
+  clip-path: circle();
+  opacity: 0.2;
+
+  position: fixed;
+}
+
+.ball.top{
+  top: -46rem;
+  width: 63.3rem;
+  right: -35rem;
+  height: 63.3rem;
+}
+
+.ball.bottom{
+  bottom: -15rem;
+  right: 5.6rem
+}
